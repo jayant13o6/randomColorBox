@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment1</title>
+        <body>
+            <h1>
+                <button id="button1" onclick="generateRandomColor()" >Click to generate random color</button>
+                <div id="box1" style="width: 100px; height: 100px; font-size: medium;"></div>
+            </h1>
+            <script>
+                function generateRandomColor(){
+                    let randomCol = Math.floor(Math.random()*16555789).toString(16)
+                    box1.style.backgroundColor = "#"+randomCol;
+                    box1.innerHTML = "#"+randomCol;
+                    console.log("button clicked")
+                }
+                box1.onclick = function(){deleteBox()}
+                function deleteBox(){
+                    box1.style.visibility="hidden";
+                    console.log("box clicked")
+                }
+            </script>
+        </body>
+    </head>
+</html>
